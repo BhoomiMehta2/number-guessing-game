@@ -1,19 +1,44 @@
-# 🎮 Number Guessing Game (C++)
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+using namespace std;
 
-This is a beginner-friendly **C++ console game** where the computer picks a random number between 1 and 60 — and you have to guess it! The program gives hints like "Too high" or "Too low" after each guess, and tracks the number of attempts.
+int main() {
+    string name;
+    char playAgain;
 
----
+    cout << "Enter your name: ";
+    cin >> name;
 
-## 📌 Features
+    do {
+        srand(time(0));  // Seed for random number (placed here for true randomness)
+        int secretNumber = rand() % 60 + 1;
+        int guess;
+        int attempts = 0;
 
-- Random number generation using `rand()` and `srand()`
-- User input and feedback through loops & conditions
-- “Play Again” option to restart the game
-- Personalized user greeting
+        cout << "\n🎮 Welcome " << name << " to the Number Guessing Game!" << endl;
 
----
+        do {
+            cout << "Enter your guess (1 to 60): ";
+            cin >> guess;
+            attempts++;
 
-## 🛠️ How to Run
+            if (guess < secretNumber) {
+                cout << "Too low! Try again. 🔻" << endl;
+            } else if (guess > secretNumber) {
+                cout << "Too high! Try again. 🔺" << endl;
+            } else {
+                cout << "🎉 Congratulations " << name << "! You guessed it in " << attempts << " attempts!" << endl;
+            }
 
-1. Clone the repo or copy `numberguess.cpp`
-2. Compile it using a C++ compiler:
+        } while (guess != secretNumber);
+
+        cout << "\nDo you want to play again? (y/n): ";
+        cin >> playAgain;
+
+    } while (playAgain == 'y' || playAgain == 'Y');
+
+    cout << "Thanks for playing, " << name << "! See you next time 👋" << endl;
+    return 0;
+}
