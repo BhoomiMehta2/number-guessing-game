@@ -1,44 +1,30 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <string>
-using namespace std;
+# 🎮 Number Guessing Game (C++)
 
-int main() {
-    string name;
-    char playAgain;
+This is a simple command-line number guessing game built using C++. The computer randomly selects a number within a range, and the player must guess it with hints provided after each attempt.
 
-    cout << "Enter your name: ";
-    cin >> name;
+---
 
-    do {
-        srand(time(0));  // Seed for random number (placed here for true randomness)
-        int secretNumber = rand() % 60 + 1;
-        int guess;
-        int attempts = 0;
+## 📌 Features
 
-        cout << "\n🎮 Welcome " << name << " to the Number Guessing Game!" << endl;
+- Random number generation
+- User input validation
+- Feedback on guesses (too high / too low)
+- Clean and beginner-friendly C++ logic
+- Replay option for multiple rounds
 
-        do {
-            cout << "Enter your guess (1 to 60): ";
-            cin >> guess;
-            attempts++;
+---
 
-            if (guess < secretNumber) {
-                cout << "Too low! Try again. 🔻" << endl;
-            } else if (guess > secretNumber) {
-                cout << "Too high! Try again. 🔺" << endl;
-            } else {
-                cout << "🎉 Congratulations " << name << "! You guessed it in " << attempts << " attempts!" << endl;
-            }
+## 🛠️ Technologies Used
 
-        } while (guess != secretNumber);
+- C++
+- [OnlineGDB](https://onlinegdb.com/) (Online Compiler)
 
-        cout << "\nDo you want to play again? (y/n): ";
-        cin >> playAgain;
+---
 
-    } while (playAgain == 'y' || playAgain == 'Y');
+## ▶️ How to Run
 
-    cout << "Thanks for playing, " << name << "! See you next time 👋" << endl;
-    return 0;
-}
+### 🔹 Online (Recommended)
+
+Play it online using OnlineGDB:  
+👉 [Click here to run the game](https://onlinegdb.com/YOUR_PROJECT_ID)  
+*(Replace this link w*
