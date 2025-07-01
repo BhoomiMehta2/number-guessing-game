@@ -17,7 +17,7 @@ This is a simple command-line number guessing game built using C++. The computer
 ## 🛠️ Technologies Used
 
 - C++
-- [OnlineGDB](https://onlinegdb.com/) (Online Compiler)
+- [Replit compiler](https://replit.com/~) (Online Compiler)
 
 ---
 
@@ -26,5 +26,5 @@ This is a simple command-line number guessing game built using C++. The computer
 ### 🔹 Online (Recommended)
 
 Play it online using OnlineGDB:  
-👉 [Click here to run the game](https://onlinegdb.com/YOUR_PROJECT_ID)  
-*(Replace this link w*
+👉 [Click here to run the game](https://replit.com/@mehtabhoomi292/Number-guessing-game#main.cpp)
+
